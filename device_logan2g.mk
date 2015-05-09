@@ -142,7 +142,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
 
 # Use the Dalvik VM specific for devices with 512 MB of RAM
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
