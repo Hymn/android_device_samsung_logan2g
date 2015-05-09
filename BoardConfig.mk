@@ -88,3 +88,11 @@ BOARD_RIL_CLASS := ../../../device/samsung/logan2g/ril/
 # UMS
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/dwc_otg.0/gadget/lun0/file"
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/logan2g/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    file_contexts \
+    device.te \
+    app.te \
+    netd.te
