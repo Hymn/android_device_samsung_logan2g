@@ -69,6 +69,7 @@ USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/logan2g/egl/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # Audio
 HAVE_HTC_AUDIO_DRIVER := true
@@ -95,6 +96,9 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
+    surfaceflinger.te \
+    init.te \
+    shell.te \
+    netd.te \
     device.te \
-    app.te \
-    netd.te
+    rild.te \ 
